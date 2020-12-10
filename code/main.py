@@ -164,7 +164,7 @@ class Root(tk.Tk):
 
         try:
             featurizer.dot_to_png(filename_temp, filename_output)
-        except Featurizer.ExecutableNotFound:
+        except Featurizer.backend.ExecutableNotFound:
             messagebox.showerror("Missing graphviz",
                                  "Missing graphviz executable\n" +
                                  "Please visit https://graphviz.org to install graphviz")
